@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Character from './Character';
+import ImageSearch from './components/ImageSearch';
 
 function App() {
   const [characters, setCharacters] = useState(null);
@@ -20,10 +20,7 @@ function App() {
 
   return (
     <div className='App'>
-      {characters &&
-        characters.map((character, i) => {
-          return <Character key={i} characterInfo={character} />;
-        })}
+      <ImageSearch />
     </div>
   );
 }
